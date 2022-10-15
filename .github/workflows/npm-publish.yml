@@ -19,10 +19,9 @@ jobs:
       - name: 'change version'
         uses: reedyuk/npm-version@1.1.1
         with:
-          version: '1.0.1'
+          version: ${{ github.event.release.tag_name }}
           package: 'projects/angular-web-app-common'
-          git-tag-version: 'true'
-      - run: yarn --pure-lockfile
+      - run: yarn
       - run: yarn run build  angular-web-app-common
       - run: yarn publish dist/angular-web-app-common
         env:
