@@ -1,0 +1,17 @@
+<div class="profile gradient-mat-primary mat-elevation-z6">
+    <div class="layout-line top">
+        <div class="userinfo"> 
+            <span class="username"><a class="foreground-color"  [routerLink]="" queryParamsHandling="preserve"  (click)="showProfileClick()">{{name}}</a></span><br />
+            <span class="logout"><a class="foreground-color" [routerLink]="" queryParamsHandling="preserve" (click)="logoutClick()">Logout</a></span>
+        </div>
+        <awac-user-avatar class="right user-avatar" [avatarUrl]="avatarUrl"></awac-user-avatar>&nbsp;
+    </div>
+
+    <div class="layout-line dark-mode">
+        <div class="right">
+            <awac-icon name="fas/fa-adjust"></awac-icon>&nbsp;<mat-slide-toggle (change)="setDarkMode($event)"
+                [checked]="darkMode"></mat-slide-toggle>
+        </div>
+    </div>
+
+</div>

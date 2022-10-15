@@ -1,0 +1,20 @@
+<div class="bottom-nav">
+
+  <a class="bottom-nav__destination" [ngClass]="{'bottom-nav__destination--active': selectedId == page.id}" href="#" *ngFor="let page of _pages | slice:0:(_pages.length > overflowItemCount)?overflowItemCount-1: overflowItemCount"
+    (click)="pageClicked(page); false;" routerLink="{{page.url}}">
+
+    <!-- <svg class="bottom-nav__icon" *ngIf="action.svgIconPath">
+      <path [attr.d]="action.svgIconPath"></path>
+    </svg> -->
+    <awac-icon class="bottom-nav__icon" [name]="page.icon"></awac-icon>
+    <span class="bottom-nav__label">{{page.title}}</span>
+  </a>
+
+  <a class="bottom-nav__destination" href="#" (click)="overflowMenu(); false;" *ngIf="_pages.length > overflowItemCount">
+
+    <awac-icon class="bottom-nav__icon" name="more_vert"></awac-icon>
+    <span class="bottom-nav__label">more</span>
+  </a>
+
+
+</div>

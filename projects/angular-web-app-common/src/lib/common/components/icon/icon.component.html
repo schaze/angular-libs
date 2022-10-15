@@ -1,0 +1,6 @@
+
+<mat-icon *ngIf="fontSet !== '' && iconType === ICON_TYPE_FONT" [fontSet]="fontSet" [fontIcon]="fontIcon"></mat-icon>
+<mat-icon *ngIf="fontSet === '' && iconType === ICON_TYPE_FONT">{{fontIcon}}</mat-icon>
+<svg mat-icon class="svg-fg" [attr.viewBox]="viewBox" *ngIf="iconType === ICON_TYPE_SVG">
+    <path [attr.d]="svgPath"></path>
+  </svg>

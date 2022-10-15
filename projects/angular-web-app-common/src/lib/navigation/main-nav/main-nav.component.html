@@ -1,0 +1,49 @@
+<mat-sidenav-container class="sidenav-container">
+
+  <mat-sidenav #drawer class="sidenav" fixedInViewport="true"
+    [attr.role]="(mode$ | async) === 'over' ? 'dialog' : 'navigation'" [mode]="(mode$ | async) || 'over'"
+    [opened]="!(isHandset$ | async) && showSidebarOnDesktop || false">
+
+
+    <!-- ng-content slot sidenav -->
+
+    <!-- User Profile -->
+    <!-- <awac-side-menu-profile [avatarUrl]="avatarUrl" [name]="name" [darkMode]="darkMode" (darkModeChanged)="setDarkMode($event)">
+    </awac-side-menu-profile> -->
+    <ng-content select="awac-nav-header, [awac-nav-header]"></ng-content>
+
+    <!-- Navigation Menu -->
+    <awac-nav-menu *ngIf="(isHandset$ | async) || !showSidebarOnDesktop" [pages]="pages" [activePage]="activePage"
+      (activePageChange)="navSelected($event); drawer.toggle()"></awac-nav-menu>
+    <awac-nav-menu *ngIf="!(isHandset$ | async) && showSidebarOnDesktop" [pages]="pages" [activePage]="activePage"
+      (activePageChange)="navSelected($event)"></awac-nav-menu>
+
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <!-- TOOLBAR -->
+    <mat-toolbar *ngLet="(isHandset$ | async) as isHandset" class="main-toolbar gradient-bg-fade"
+      [ngClass]="{'toolbar-left': isHandset || (!showSidebarOnDesktop && !drawer.opened)  }">
+      <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()"
+        *ngIf="(isHandset$ | async) || !showSidebarOnDesktop">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+
+      <span class="awac-title">{{title}}</span>
+
+      <!-- ng-content slot toolbar-left -->
+      <span class="fill-remaining-space"></span>
+      <!-- ng-content slot toolbar-right -->
+
+      <ng-content select="awac-nav-toolbar-actions, [awac-nav-toolbar-actions]"></ng-content>
+      <!-- <button class="refresh-button" mat-icon-button (click)="refresh();">
+        <mat-icon>refresh</mat-icon>
+      </button> -->
+    </mat-toolbar>
+
+
+    <!-- Add Content Here -->
+    <ng-content></ng-content>
+  </mat-sidenav-content>
+
+</mat-sidenav-container>

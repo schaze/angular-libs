@@ -1,0 +1,40 @@
+{
+  "name": "angular-web-app-common",
+  "version": "0.0.0",
+  "author": {
+    "name": "schaze",
+    "email": "schazet@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/schaze/angular-libs.git"
+  },
+  "homepage": "https://www.npmjs.com/package/hc-node-homie-smarthome",
+  "license": "MIT",
+  "peerDependencies": {
+    "@angular/animations": "~13.0.0",
+    "@angular/cdk": "^13.0.0",
+    "@angular/common": "~13.0.0",
+    "@angular/compiler": "~13.0.0",
+    "@angular/core": "~13.0.0",
+    "@angular/forms": "~13.0.0",
+    "@angular/material": "^13.0.0",
+    "@angular/platform-browser": "~13.0.0",
+    "@angular/platform-browser-dynamic": "~13.0.0",
+    "@angular/router": "~13.0.0",
+    "@angular/service-worker": "^13.0.0",
+    "@fortawesome/fontawesome-free": "^5.15.4",
+    "material-bottom-nav": "^1.2.0"
+  },
+  "exports":{
+    ".": {
+      "sass":"./styles/awac-styles.scss"
+    },
+    "./theming": {
+      "sass": "./styles/awac-styles.scss"
+    }
+  },
+  "dependencies": {
+    "tslib": "^2.3.0"
+  }
+}

@@ -1,0 +1,8 @@
+<mat-nav-list>
+  <mat-list-item routerLink="{{page.url}}" *ngFor="let page of data.pages"   [ngClass]="{'list-item-active':data.selectedId == page.id}" (click)="pageClicked(page, $event); false;">
+
+    <awac-icon class="bottom-nav__icon" [name]="page.icon"></awac-icon>
+    <span mat-line>{{page.title}}</span>
+  </mat-list-item>
+
+</mat-nav-list>

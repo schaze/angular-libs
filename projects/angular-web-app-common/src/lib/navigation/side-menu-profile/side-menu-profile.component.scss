@@ -1,0 +1,47 @@
+
+.profile{
+    width: 100%;
+    height: 180px;
+    // padding: 6px;\
+}
+
+
+
+.top{
+    height:132px;
+}
+
+.userinfo{
+    padding-left: 4px;
+}
+
+.username{
+    font-size: 22px;
+    font-weight: 300;
+
+}
+.username a {
+    text-decoration: none;
+}
+.logout{
+    font-size: 12px;
+    font-weight: 100;
+}
+
+.logout a {
+    text-decoration: none;
+}
+
+.user-avatar  {
+    // box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 1); 
+    width: 84px;
+    height: 84px;
+}
+
+.dark-mode {
+    padding-right: 12px;
+    height:42px;
+    font-size: 12px;
+    font-weight: 100;
+    vertical-align: bottom;
+}

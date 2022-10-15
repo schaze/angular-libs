@@ -1,0 +1,29 @@
+// Sizes
+$small-screen-width: 600px;
+$medium-screen-width: 720px;
+$large-screen-width: 960px;
+
+$header-height: 60px;
+$toolbar-height: 60px;
+$urlbar-height: 58px;
+
+
+/* BottomNav ICONS */
+/* ============== */
+$bottom-nav-action-horizontal-margin: 4px; // reduce the horizontal gutter between actions
+// $bottom-nav-icon-font-size: 20px; // decrease the icon size
+$bottom-nav-action-vertical-padding: 4px;
+$bottom-nav-label-font-size-inactive: 10px;
+$bottom-nav-label-font-size-active: 10px;
+
+
+
+/* MATERIAL ICONS */
+/* ============== */
+$mat-font-path:         "../materialicons" !default;
+
+
+/* FONTAWESOME */
+/* =========== */
+$fa-font-path : '~@fortawesome/fontawesome-free/webfonts';
+$fa-font-size-base: 24px !default;
